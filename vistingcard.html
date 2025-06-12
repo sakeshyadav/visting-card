@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Visiting Card - Cold Drink Distributor</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+    body {
+      background: linear-gradient(to right, #1f4037, #99f2c8);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .card {
+      width: 340px;
+      background: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 255, 200, 0.3);
+      overflow: hidden;
+      animation: floatUp 1s ease;
+    }
+
+    .top {
+      background: linear-gradient(135deg, #43cea2, #185a9d);
+      color: white;
+      text-align: center;
+      padding: 30px 20px 60px;
+      position: relative;
+    }
+
+    .top h2 {
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+    .top p {
+      font-size: 14px;
+      margin-top: 4px;
+      opacity: 0.9;
+    }
+
+    .profile {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 4px solid white;
+      object-fit: cover;
+      position: absolute;
+      bottom: -50px;
+      left: 50%;
+      transform: translateX(-50%);
+      box-shadow: 0 0 12px #00ffe5;
+    }
+
+    .bottom {
+      padding: 70px 20px 30px;
+      text-align: center;
+    }
+
+    .info {
+      font-size: 14px;
+      color: #444;
+      margin: 6px 0;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 22px;
+      background: #00b894;
+      color: white;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0, 255, 200, 0.4);
+    }
+
+    .btn:hover {
+      background: #00997a;
+      transform: scale(1.05);
+    }
+
+    @keyframes floatUp {
+      from { transform: translateY(40px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <div class="top">
+      <h2>Sakesh Enterprises</h2>
+      <p>Cold Drink Distributor</p>
+      <img src="https://i.ibb.co/VQmtgjh/avatar.jpg" class="profile" alt="Your Photo">
+    </div>
+    <div class="bottom">
+      <div class="info">📞 +91 98765 43210</div>
+      <div class="info">✉️ sakesh@drinksagency.com</div>
+      <div class="info">📍 Patna, Bihar</div>
+      <a href="https://wa.me/919876543210" class="btn">📲 WhatsApp Now</a>
+    </div>
+  </div>
+
+</body>
+</html>
