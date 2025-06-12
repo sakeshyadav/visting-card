@@ -1,108 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Visiting Card - Cold Drink Distributor</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>Perfect Business Card UI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
-    body {
-      background: linear-gradient(to right, #1f4037, #99f2c8);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-    .card {
-      width: 340px;
-      background: #ffffff;
-      border-radius: 20px;
-      box-shadow: 0 10px 30px rgba(0, 255, 200, 0.3);
-      overflow: hidden;
-      animation: floatUp 1s ease;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    .top {
-      background: linear-gradient(135deg, #43cea2, #185a9d);
-      color: white;
-      text-align: center;
-      padding: 30px 20px 60px;
+    body {
+      background: #0b2c56;
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .phone {
+      width: 100%;
+      max-width: 340px;
+      background: #2e2e2e;
+      border-radius: 40px;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* ✅ Match padding + width with white-card */
+    .notch-wrapper {
+      width: 90%;
+      padding: 0 20px;
+      margin-top: 20px;
+    }
+
+    .notch {
+      width: 100%;
+      height: 25px;
+      background: #000;
+      border-radius: 20px;
+    }
+
+    .card-bg {
+      width: 100%;
+      height: 220px;
+      background: linear-gradient(to bottom right, #00ffb3, #04f, #ff7777);
+      border-bottom-left-radius: 60px;
+      border-bottom-right-radius: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       position: relative;
     }
 
-    .top h2 {
-      font-size: 24px;
-      font-weight: 600;
+    .logo {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+      filter: brightness(0) invert(1);
+       margin-top: -10px;
     }
 
-    .top p {
-      font-size: 14px;
-      margin-top: 4px;
-      opacity: 0.9;
+    .white-card {
+      width: 90%;
+      background: white;
+      margin-top: -50px;
+      border-radius: 25px;
+      padding: 70px 20px 20px;
+      text-align: center;
+      position: relative;
+      z-index: 2;
     }
 
-    .profile {
+    .profile-img {
       width: 100px;
       height: 100px;
       border-radius: 50%;
-      border: 4px solid white;
       object-fit: cover;
+      border: 5px solid white;
       position: absolute;
-      bottom: -50px;
+      top: -50px;
       left: 50%;
       transform: translateX(-50%);
-      box-shadow: 0 0 12px #00ffe5;
     }
 
-    .bottom {
-      padding: 70px 20px 30px;
-      text-align: center;
+    .name {
+      font-size: 20px;
+      font-weight: bold;
+      color: #333;
     }
 
-    .info {
+    .designation {
       font-size: 14px;
-      color: #444;
-      margin: 6px 0;
+      color: #666;
+      margin-top: 5px;
+    }
+
+    .description {
+      font-size: 12px;
+      color: #888;
+      margin-top: 10px;
+    }
+
+    .btn-section {
+      width: 90%;
+      padding: 10px 20px 25px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 10px;
     }
 
     .btn {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 10px 22px;
-      background: #00b894;
-      color: white;
-      border-radius: 25px;
+      background: #f0f0f0;
+      color: #222;
+      font-weight: bold;
+      border-radius: 30px;
+      padding: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
       text-decoration: none;
-      font-weight: 600;
-      transition: 0.3s ease;
-      box-shadow: 0 4px 10px rgba(0, 255, 200, 0.4);
+      transition: 0.3s;
     }
 
     .btn:hover {
-      background: #00997a;
-      transform: scale(1.05);
+      background: #ddd;
     }
 
-    @keyframes floatUp {
-      from { transform: translateY(40px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
+    .btn img {
+      width: 18px;
+      height: 18px;
     }
+
+    @media (max-height: 700px) {
+      body {
+        align-items: flex-start;
+      }
+    }
+
   </style>
 </head>
 <body>
 
-  <div class="card">
-    <div class="top">
-      <h2>Sakesh Enterprises</h2>
-      <p>Cold Drink Distributor</p>
-      <img src="https://i.ibb.co/VQmtgjh/avatar.jpg" class="profile" alt="Your Photo">
+  <div class="phone">
+    
+    <!-- ✅ Fixed Notch with proper width and padding -->
+    <div class="notch-wrapper">
+      <div class="notch"></div>
     </div>
-    <div class="bottom">
-      <div class="info">📞 +91 98765 43210</div>
-      <div class="info">✉️ sakesh@drinksagency.com</div>
-      <div class="info">📍 Patna, Bihar</div>
-      <a href="https://wa.me/919876543210" class="btn">📲 WhatsApp Now</a>
+
+    <!-- Top Background Logo Section -->
+    <div class="card-bg">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png" class="logo" alt="Logo">
+    </div>
+
+    <!-- White Card -->
+    <div class="white-card">
+      <img src="https://randomuser.me/api/portraits/men/75.jpg" class="profile-img" alt="Profile">
+      <div class="name">Aditya Verma</div>
+      <div class="designation">Marketing Lead</div>
+      <div class="description">
+        Growth strategist with 10+ years<br>
+        in creative advertising and<br>
+        digital media campaigns.
+      </div>
+    </div>
+
+    <!-- OUTSIDE BUTTONS -->
+    <div class="btn-section">
+      <a href="#" class="btn">
+        <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Email"> Email
+      </a>
+      <a href="#" class="btn">
+        <img src="https://cdn-icons-png.flaticon.com/512/159/159832.png" alt="Phone"> Phone
+      </a>
+      <a href="#" class="btn">
+        <img src="https://cdn-icons-png.flaticon.com/512/535/535239.png" alt="Website"> Website
+      </a>
     </div>
   </div>
 
